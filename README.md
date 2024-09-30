@@ -47,25 +47,50 @@ Next, to add the SSH Public Key to your DigitalOcean account:
 
 1.Log into your DigitalOcean account.
 
-
 2.Click on settings on the left sidebar of your screen. 
 
 ![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/image1.png)
-
 
 3.Click on Security tab in SETTINGS. 
 
 ![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/Settings.png)
 
-4.
+4.Click on add SSH Key and paste your key that you copied with the command into the box below.
+
+![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/SSHKeypng)
+
+5. Name your key.
+
+Once completed all the steps, it should look like this:
+
+![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/NewSSH.png)
+
+You have successfully added your SSH key to your DigitalOcean account
 
 
+## Adding a custom Arch Linux image
+We will create a server using DigitalOcean and for this manual, we will use ArchLinux as the Linux distrubution.
+To do so:
+1. Enter the following URL:https://gitlab.archlinux.org/archlinux/arch-boxes/-/packages/1545
 
-## Installation
+2. Download the following Arch Linux  ```qcow2``` file.
+
+![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/linuximg.png)
+we will use qcow2 because it is easy to use and offers better performance.
+
+You have sucessfully downloaded the Arch Linux image for creating a dropet.
+
+## Creating a droplet running Arch Linux
+To use the Arch Linux image we downloaded, we must first create a DigitalOcean droplet. To do so:
+1.Click on Create and select Droplets
+
+![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/createdroplet.png)
+
 
 
 
 ## Resources
 
    https://www.cloudflare.com/learning/access-management/what-is-ssh/
+   https://www.vinchin.com/vm-tips/raw-vs-qcow2.html
 
