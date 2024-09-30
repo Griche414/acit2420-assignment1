@@ -125,8 +125,8 @@ To use the Arch Linux image we downloaded, we must first create a DigitalOcean d
 With your newly generated SSH key and the Arch Linux Image, we will now setup a cloud-init config file. Cloud-init enables you to skip most of the manual setup that is tedious, especially when you're creating multiple servers. 
 
 To start the cloud-init config procedure: 
-1. Use your Preferred text editor. For this manual, we will use notepad
-2. Create a new txt.file and save it as ```cloud-config.yml```
+1. Use your Preferred text editor. For this manual, we will use notepad.
+2. Create a new txt.file and save it as ```cloud-config.yml```.
 3. Paste the following text into your text editor:
 ```#cloud-config
 users:
@@ -154,9 +154,9 @@ disable_root: true
 4. Replace the ```name``` and ```primary_group``` with your windows username.
 5. ```ssh-authorized keys``` will be replaced with the public key you used.
 
-6. Going back to the droplet creation, click Advanced Options
+6. Going back to the droplet creation, click Advanced Options.
 7. Click on Add Initialization scripts (free).
-8. Paste the block of text into the empty text box.
+8. Paste the block of text from your ```yaml``` file into the empty text box.
 9. 
 ![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/yml.png)
 
@@ -167,7 +167,7 @@ disable_root: true
 You have successfully created your first Droplet.
 
 ## Connect to your server using your SSH keys
-With your created Droplet using cloud-init automation. We will now connect to the server via terminal.
+With your created Droplet using cloud-init automation, we will now connect to the server via terminal.
 To do so:
 1. Copy the ip address from your created droplet.
 2. Open up a terminal.
@@ -176,7 +176,7 @@ To do so:
 Result should look like this:
 ![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/ipaddress.png)
 
-You have successfully connected to your server using your SSH keys.
+You have successfully connected to your server using your SSH keys. Repeat the process to setup more servers.
 
 ## References
    https://www.cloudflare.com/learning/access-management/what-is-ssh/
