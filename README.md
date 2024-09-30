@@ -45,8 +45,8 @@ This will copy the content of your public key content.
 
 Next, to add the SSH Public Key to your DigitalOcean account:
 1.Log into your DigitalOcean account.
-2.Click on settings on the left sidebar of your screen. ![Alt text](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/image1.png)
-3.Click on Security tab in SETTINGS. ![Alt text](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/Settings.png)
+2.Click on settings on the left sidebar of your screen. ![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/image1.png)
+3.Click on Security tab in SETTINGS. ![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/Settings.png)
 
 4.
 
