@@ -157,10 +157,10 @@ disable_root: true
 6. Going back to the droplet creation, click Advanced Options.
 7. Click on Add Initialization scripts (free).
 8. Paste the block of text from your ```yaml``` file into the empty text box.
-9. 
+
 ![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/yml.png)
 
-10. Click on Create Droplet. Your droplet should look like this:
+9. Click on Create Droplet. Your droplet should look like this:
 
 ![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/firstdroplet.png)
 
