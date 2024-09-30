@@ -159,7 +159,9 @@ disable_root: true
 9. 
 ![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/yml.png)
 
-10. Click on Create Droplet.
+10. Click on Create Droplet. Your droplet should look like this:
+
+![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/firstdroplet.png)
 
 You have successfully created your first Droplet.
 
