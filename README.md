@@ -168,11 +168,17 @@ You have successfully created your first Droplet.
 
 ## Connect to your server using your SSH keys
 With your created Droplet using cloud-init automation. We will now connect to the server via terminal.
+To do so:
+1. Copy the ip address from your created droplet.
+2. Open up a terminal.
+3. Paste in the following command with your ip address.
+```ssh -i ~/.ssh/do-key arch@<Your IP Address>```
+Result should look like this:
+![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/ipaddress.png)
 
+You have successfully connected to your server using your SSH keys.
 
-
-## Resources
-
+## References
    https://www.cloudflare.com/learning/access-management/what-is-ssh/
    https://gitlab.com/cit2420/2420-notes-f24/-/blob/main/2420-notes/week-two.md
    https://www.vinchin.com/vm-tips/raw-vs-qcow2.html
