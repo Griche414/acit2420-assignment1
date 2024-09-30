@@ -149,10 +149,19 @@ packages:
 
 disable_root: true
 ```
-4. Going back to the droplet creation, click Advanced Options
-5. Click on Add Initialization scripts (free).
-6. Paste the block of text into the empty text box.
+
+4. Replace the ```name``` and ```primary_group``` with your windows username.
+5. ```ssh-authorized keys``` will be replaced with the public key you used.
+
+6. Going back to the droplet creation, click Advanced Options
+7. Click on Add Initialization scripts (free).
+8. Paste the block of text into the empty text box.
+9. 
 ![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/yml.png)
+
+10. Click on Create Droplet.
+
+You have successfully created your first Droplet.
 
 
 
