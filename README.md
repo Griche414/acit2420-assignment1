@@ -11,6 +11,7 @@ Topics the guide will cover:
     - Install some initial packages
     - Add a public SSH key to the authorized_keys file in your new user home directory
     - Disable root access via SSH
+-connecting to a server using SSH keys
 
 
 ## Creating ssh keys and add them to your DigitalOcean account
@@ -164,6 +165,9 @@ disable_root: true
 ![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/firstdroplet.png)
 
 You have successfully created your first Droplet.
+
+## Connect to your server using your SSH keys
+With your created Droplet using cloud-init automation. We will now connect to the server via terminal.
 
 
 
