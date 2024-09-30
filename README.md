@@ -117,9 +117,7 @@ To use the Arch Linux image we downloaded, we must first create a DigitalOcean d
 
 11. Select 1 Droplet as we only need one droplet for this guide. It is the dafault option.
 
-12. Type in a Host Name and click on Create Droplet at the bottom right of your screen.
-
-You have successfully created your DigitalOcean droplet.
+12. Type in a Host Name.
 
 ## Use a cloud-init configuration file to automate initial setup tasks
 
@@ -151,6 +149,13 @@ packages:
 
 disable_root: true
 ```
+4. Going back to the droplet creation, click Advanced Options
+5. Click on Add Initialization scripts (free).
+6. Paste the block of text into the empty text box.
+![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/yml.png)
+
+
+
 ## Resources
 
    https://www.cloudflare.com/learning/access-management/what-is-ssh/
