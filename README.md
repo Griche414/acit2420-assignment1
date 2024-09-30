@@ -6,7 +6,6 @@ Topics the guide will cover:
 - Creating ssh keys and add them to your DigitalOcean account
 - Adding a custom Arch Linux image
 - Creating a droplet running Arch Linux
-- Connecting to your droplet from your local machine using SSH
 - Using cloud-init to:
     - Create a new regular user
     - Install some initial packages
@@ -19,7 +18,7 @@ The Secure Shell (SSH) protocol is a method you can use to securely transfer mes
 
 To create your ssh key:
 
-1. Open your Linux terminal
+1. Open your terminal
     - Ensure you have a ssh directory, if not, create one using this command:
     ```mkdir -p ~/.ssh```
     this command will create a .ssh directory in your home directory, and ```-p``` ensures that no error occurs if the directory already exists.
@@ -45,13 +44,13 @@ This will copy the content of your public key content.
 
 Next, to add the SSH Public Key to your DigitalOcean account:
 
-1.Log into your DigitalOcean account.
+1. Log into your DigitalOcean account.
 
-2.Click on settings on the left sidebar of your screen. 
+2. Click on settings on the left sidebar of your screen. 
 
 ![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/image1.png)
 
-3.Click on Security tab in SETTINGS. 
+3. Click on Security tab in SETTINGS. 
 
 ![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/Settings.png)
 
@@ -86,11 +85,76 @@ To use the Arch Linux image we downloaded, we must first create a DigitalOcean d
 
 ![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/createdroplet.png)
 
+2. Click on San Francisco as the region.
 
+![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/sanfran.png)
 
+3. Select San Francisco Datacenter 3 - SFO3
 
+![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/03.png)
+
+4. Click Custom images from Choose an image section and select the Arch Linux file we downloaded.
+
+![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/customimg.png)
+
+5. Select Arch Linux as the distrubution.
+
+7. Repeat steps 2 and 3, then click on Upload Image.
+
+![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/uploadimg.png)
+
+8. Go pack to previous page and Select the Arch Linux Image you uploaded. 
+
+8. Click on Basic Plan.
+
+9. Click on either Premium AMD or Premium Intel and select cheapest plan.
+
+![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/plan.png)
+
+10. Click on SSH Key from Choose Authentification Method. By default, the SSH Key you created is automatically selected.
+
+![image](https://github.com/Griche414/acit2420-assignment1/blob/main/Assets/KeyFun.png)
+
+11. Select 1 Droplet as we only need one droplet for this guide. It is the dafault option.
+
+12. Type in a Host Name and click on Create Droplet at the bottom right of your screen.
+
+You have successfully created your DigitalOcean droplet.
+
+## Use a cloud-init configuration file to automate initial setup tasks
+
+With your newly generated SSH key and the Arch Linux Image, we will now setup a cloud-init config file. Cloud-init enables you to skip most of the manual setup that is tedious, especially when you're creating multiple servers. 
+
+To start the cloud-init config procedure: 
+1. Use your Preferred text editor. For this manual, we will use notepad
+2. Create a new txt.file and save it as ```cloud-config.yml```
+3. Paste the following text into your text editor:
+```#cloud-config
+users:
+  - name: <New Username>
+    primary_group: <Group Name>
+    groups: wheel
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    shell: /bin/bash
+    ssh-authorized-keys:
+      - ssh-ed25519 <Your Public Key> <Your Email>
+
+packages:
+  - ripgrep
+  - rsync
+  - neovim
+  - fd
+  - less
+  - man-db
+  - bash-completion
+  - tmux
+
+disable_root: true
+```
 ## Resources
 
    https://www.cloudflare.com/learning/access-management/what-is-ssh/
+   https://gitlab.com/cit2420/2420-notes-f24/-/blob/main/2420-notes/week-two.md
    https://www.vinchin.com/vm-tips/raw-vs-qcow2.html
+   https://www.digitalocean.com/community/tutorials/how-to-use-cloud-config-for-your-initial-server-setup
 
